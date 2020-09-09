@@ -1,0 +1,36 @@
+{
+  "type": "panel",
+  "name": "octopusSvc",
+  "id": "5194-octopus-svc",
+  "info": {
+    "description": "mota",
+    "author": {
+      "name": "songhanpoo",
+      "url": "github.com/songhanpoo"
+    },
+    "keywords": [
+      "poo"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/simple-react-panel"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaVersion": "7.0.x",
+    "plugins": []
+  }
+}
