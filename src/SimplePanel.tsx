@@ -60,11 +60,23 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     }
   }
 
-  for (let i = 0; i < dupList.length; i++) {
-    if (uniqueList[i].nameLog === dupList[i].nameLog) {
-      uniqueList[i].status = [...uniqueList[i].status, dupList[i].status[i]];
+
+  const lookup:any = a.reduce((a:any, e:any) => {
+    a[e.nameLog] = ++a[e.nameLog] | 0;
+    return a;
+  }, {});
+  
+  var dupListnew:any = a.filter((e:any) => lookup[e.nameLog]);
+  
+  
+  for(i of uniqueList){
+    for(e of dupListnew){
+      if(i.nameLog === e.nameLog){
+        i.status=[...i.status,e.status[0]]
+      }
     }
   }
+
 
   return (
     <div
